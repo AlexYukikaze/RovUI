@@ -34,5 +34,3 @@ private:
     QScopedPointer<QLabel> m_thrusterFiveLabel;
     QScopedPointer<QLabel> m_thrusterSixLabel;
 };
-
-#endif // DEBUGDIALOG_HPP

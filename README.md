@@ -5,7 +5,7 @@
 Данное ПО зависит от:
 - Qt 5.6+ (core gui network multimedia multimediawidgets).
 - C++11
-- SFML 2.4.1 (В репозитории находятся собранные бинарники для Windows MingGW 5.3).
+- SFML 2.5.1 (В репозитории находятся собранные бинарники для Windows MingGW 7.3.0).
 
 Работоспособность проверялась только под Windows 10, если Вы хотите использовать данное ПО под GNU/Linux, MacOS, FreeBSD, Plan 9, под какой-либо другой ОС и у Вас возникли проблемы, создайте [issue](https://github.com/murproject/RovUI/issues "issue"), мы поможем. :) 
 

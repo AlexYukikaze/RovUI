@@ -101,6 +101,7 @@ int main(int argc, char* argv[])
 {
     qInstallMessageHandler(setMessageOutput);
 
+
     QApplication a(argc, argv);
     makeDark(a);
 

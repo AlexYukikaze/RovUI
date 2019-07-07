@@ -7,8 +7,8 @@
 TEMPLATE = subdirs
 CONFIG += ordered
 
-RESOURCES += \
-    icons.qrc
+#RESOURCES += \
+#    icons.qrc
 
 SUBDIRS += \
         src
