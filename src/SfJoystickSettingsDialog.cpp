@@ -17,7 +17,7 @@ SfJoystickSettingsDialog::SfJoystickSettingsDialog(QWidget* parent)
     createConnections();
 }
 
-QVector<qreal> SfJoystickSettingsDialog::getMotorSpeeds(sf::Joystick::Axis axis)
+RealList SfJoystickSettingsDialog::getThrustersSpeed(sf::Joystick::Axis axis)
 {
     auto motorMultipliers = m_settingsTable->getValue(axis);
     auto value = sf::Joystick::getAxisPosition(0, axis);
@@ -35,7 +35,7 @@ void SfJoystickSettingsDialog::createLayout()
     QVBoxLayout *layout = new QVBoxLayout();
     layout->addWidget(m_settingsTable);
 
-    resize(500, 300);
+    resize(700, 300);
     setLayout(layout);
 }
 

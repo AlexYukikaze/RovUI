@@ -6,10 +6,6 @@
 #include <QtCore>
 
 struct RovControl {
-    qint8 axisX = 0; //! -100/100;
-    qint8 axisY = 0; //! -100/100;
-    qint8 axisZ = 0; //! -100/100;
-    qint8 axisW = 0; //! -100/100;
     float desiredDepth = 0.0f;
     qint8 cameraRotation[2] = { 0, 0 };
     qint8 thrusterPower[6] = { 0, 0, 0, 0, 0, 0 };
@@ -25,11 +21,6 @@ struct RovControl {
         QDataStream in(&ba, QIODevice::WriteOnly);
         in.setFloatingPointPrecision(QDataStream::SinglePrecision);
 
-        in << axisX;
-        in << axisY;
-        in << axisZ;
-        in << axisW;
-        in << debugFlag;
         for (qint8 t : thrusterPower) {
             in << t;
         }

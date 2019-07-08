@@ -26,6 +26,7 @@ public:
         PovX,
         PovY
     };
+    Q_ENUM(JoystickAxis)
 
     enum Motors
     {
@@ -34,11 +35,13 @@ public:
         BackLeft,
         BackRight,
         VerticalFront,
-        VertickalBack
+        VerticalBack,
+        ServoX,
+        ServoY,
+        Manipulator
     };
-
-    Q_ENUM(JoystickAxis)
     Q_ENUM(Motors)
+
     SettingsTable(QWidget *parent = nullptr);
 
     void resetData();
