@@ -12,9 +12,6 @@ class SettingsTable : public QTableWidget
 {
     Q_OBJECT
 public:
-//    static const int AXIS_COUNT = 8;
-//    static const int MOTOR_COUNT = 6;
-
     enum JoystickAxis
     {
         X,
@@ -64,5 +61,6 @@ public:
 
 template<typename T>
 QStringList createLabelsFromEnum(T *object, const char *enumName);
+QStringList createLabelsNames(QString prefix, int count);
 
 #endif // SETTINGSTABLE_H

@@ -14,7 +14,7 @@ SettingsTable::SettingsTable(QWidget *parent)
 
 void SettingsTable::setup()
 {
-    auto axisLabels = createLabelsFromEnum(this, "JoystickAxis");
+    auto axisLabels = createLabelsNames("Ось #", sf::Joystick::AxisCount);
     auto motorLabels = createLabelsFromEnum(this, "Motors");
 
     setRowCount(axisLabels.count());
@@ -98,5 +98,17 @@ QStringList createLabelsFromEnum(T *object, const char *enumName)
         auto key = axisEnum.key(i);
         names.append(key);
     }
+    return names;
+}
+
+QStringList createLabelsNames(QString prefix, int count)
+{
+    QStringList names;
+    QString format("%1%2");
+    for (int i = 0; i < count; ++i)
+    {
+        names.append(format.arg(prefix, QString::number(i+1)));
+    }
+
     return names;
 }
