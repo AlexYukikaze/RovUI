@@ -10,17 +10,17 @@ public:
 
     ~SfJoystick();
 
-    int xAxis();
+//    int xAxis();
 
-    int yAxis();
+//    int yAxis();
 
-    int zAxis();
+//    int zAxis();
 
-    int wAxis();
+//    int wAxis();
 
-    int servoXAxis();
+//    int servoXAxis();
 
-    int servoYAxis();
+//    int servoYAxis();
 
     bool isConnected();
 
