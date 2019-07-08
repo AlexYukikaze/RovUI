@@ -19,7 +19,8 @@ SOURCES += \
     RovUdpConnection.cpp \
     RegulatorsWidget.cpp \
     DebugDialog.cpp \
-    LogWidget.cpp
+    LogWidget.cpp \
+    settingstable.cpp
 
 HEADERS += \
     MainWindow.hpp \
@@ -36,7 +37,8 @@ HEADERS += \
     RovDataTypes.hpp \
     RegulatorsWidget.hpp \
     DebugDialog.hpp \
-    LogWidget.hpp
+    LogWidget.hpp \
+    settingstable.h
 
 include(deps/deps.pri)
 

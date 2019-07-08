@@ -55,10 +55,10 @@ void RovSingleton::createConnections()
 
     QObject::connect(m_transmitTimer.data(), &QTimer::timeout, [this]() {
         if (m_isTransmit) {
-            m_controlData.axisW *= m_scaleFactor;
-            m_controlData.axisX *= m_scaleFactor;
-            m_controlData.axisZ *= m_scaleFactor;
-            m_controlData.axisY *= m_scaleFactor;
+            for (int i = 0; i < 6; ++i)
+            {
+                m_controlData.thrusterPower[i] *= m_scaleFactor;
+            }
             m_udpConnection->transmitDatagram(m_controlData.toRangerControlMsg());
         }
     });
